@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe la altura del viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+    background-image: url('../../assets/img/HomePage.jpg');
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
+    background-position: center;
+}
+
+.text-container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center; /* Centra el texto */
+    max-width: 90%; /* Ancho máximo para dispositivos móviles */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Animación de desvanecimiento */
+}
+
+.home-container .btn-home {
+    background-color: #ffb66e;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; /* Animación de desvanecimiento con retraso */
+}
+
+.name-airbnb {
+    font-weight: bold;
+    font-size: 32px;
+    font-family: "Calistoga", serif;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin-top: -10px; /* Reduce el espacio superior */
+}
+
+.logo-brisas-cix {
+    font-size: 80px;
+    color: #FFD700;
+    margin-bottom: 10px; /* Reduce el espacio inferior */
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Animación de desvanecimiento */
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.address {
+    font-size: 18px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {    
+    .name-airbnb {
+        margin-top: -5px; /* Reduce aún más el espacio superior */
+    }
+}
+
+/* Definición de la animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
